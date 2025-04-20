@@ -533,7 +533,7 @@ body {
       }
     
       .plan-free {
-        display: block;
+        display: none;
         font-size: 0.75rem;
         color: #022959;
         margin-top: -5px;
