@@ -1,0 +1,499 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f6ff;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 960px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sidebar {
+    background-color: #483EFF;
+    color: white;
+    width: 250px;
+    padding: 80px 40px;
+    position: relative;
+    background-image: url('/images/bg-sidebar-desktop.svg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px 25px 25px 25px;
+  }
+  
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .step-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .step-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .step-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  
+  .step-label {
+    font-size: 0.75rem;
+    color: #d6e0ff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  
+  .step-desc {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  /* Active Step Styling */
+  .step-item.active .step-circle {
+    background-color: #BEE3F8;
+    color: #022959;
+    border-color: #BEE3F8;
+  }
+  
+  
+  .form-section {
+    flex: 1;
+    padding: 100px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #022959;
+  }
+  
+  p {
+    color: #9699aa;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    font-weight: 500;
+    color: #022959;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  input:focus {
+    border: 2px solid #483EFF;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: none;
+  }
+  
+  button {
+    align-self: flex-end;
+    background-color: #022959;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #174a8b;
+  }
+  
+
+
+
+  /* STEP 2 DESIGN */
+
+
+  .plan-options {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+  }
+  
+  .plan-card {
+    flex: 1;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: white;
+    transition: border 0.3s;
+  }
+  
+  .plan-card input {
+    display: none;
+  }
+  
+  .plan-card input:checked + .plan-content,
+  .plan-card:has(input:checked) {
+    border-color: #483EFF;
+    background-color: #f0f6ff;
+  }
+  
+  .plan-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; 
+  }
+  
+  .plan-content img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px; 
+  }
+  
+  
+  .plan-price {
+    font-size: 0.9rem;
+    color: #9699aa;
+  }
+  
+  .toggle-wrapper {
+    background-color: #f8f9ff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    gap: 15px;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    background-color: #022959;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .go-back {
+    color: #9699aa;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .go-back:hover {
+    color: #022959;
+  }
+  
+  .next-btn {
+    background-color: #022959;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10%;
+  }
+
+  .plan-free {
+    color: black;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap; /* keeps it on one line */
+    display: none; /* will toggle based on billing type */
+  }
+  
+  
+  
+
+
+/* STEP 3 */
+
+
+.addon-option {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .addon-option input[type="checkbox"] {
+    display: none;
+  }
+  
+  .addon-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .addon-option input[type="checkbox"]:checked + .addon-box {
+    border-color: #483eff;
+    background-color: #f0f4ff;
+  }
+  
+  .addon-title {
+    font-weight: bold;
+    color: #022959;
+  }
+  
+  .addon-desc {
+    font-size: 0.9rem;
+    color: #9699aa;
+  }
+  
+  .addon-price {
+    color: #483eff;
+    font-weight: bold;
+  }
+  
+
+  /* STEP 4 */
+
+.summary-box {
+  background-color: #f8f9ff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.summary-header strong {
+  color: #022959;
+}
+
+.summary-header a {
+  display: block;
+  color: #483eff;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-top: 1px solid #ccc;
+  color: #9699aa;
+  font-size: 0.9rem;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-weight: bold;
+  color: #483eff;
+  background-color: #f0f4ff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+
+
+
+
+
+/* confirmation page */
+
+
+.thank-you-screen {
+    text-align: center;
+    padding: 80px 40px;
+  }
+  
+  .thank-you-screen img {
+    width: 80px;
+    margin-bottom: 30px;
+  }
+  
+  .thank-you-screen h1 {
+    color: #022959;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .thank-you-screen p {
+    color: #9699aa;
+    font-size: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .thank-you-screen a {
+    color: #483EFF;
+    text-decoration: underline;
+  }
+  
+
+
+
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      max-width: 100%;
+      margin: 0;
+      background: none;
+    }
+  
+    .sidebar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background-image: url('/images/bg-sidebar-mobile.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 0;
+      width: 100%;
+    }
+  
+    .steps {
+      flex-direction: row;
+      gap: 15px;
+    }
+  
+    .step-item {
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+  
+    .step-circle {
+      width: 35px;
+      height: 35px;
+      font-size: 14px;
+      border: 2px solid white;
+      background-color: transparent;
+      color: white;
+    }
+  
+    .step-item.active .step-circle {
+      background-color: #BEE3F8;
+      color: #022959;
+      border-color: #BEE3F8;
+    }
+  
+    .step-info {
+      display: none;
+    }
+  
+    .form-section {
+      background-color: white;
+      padding: 30px 20px;
+      margin: -20px 20px 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+  
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+  
+    .next-btn,
+    button {
+      padding: 12px 25px;
+      width: auto;
+    }
+  
+    .go-back {
+      font-weight: 500;
+    }
+  }
+  

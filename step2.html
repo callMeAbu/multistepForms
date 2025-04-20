@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Plan</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+    <div class="steps">
+        <div class="step-item" data-step="1">
+
+            
+          <div class="step-circle">1</div>
+          <div class="step-info">
+            <span class="step-label">Step 1</span>
+            <span class="step-desc">Your info</span>
+          </div>
+        </div>
+        <div class="step-item" data-step="2">
+          <div class="step-circle">2</div>
+          <div class="step-info">
+            <span class="step-label">Step 2</span>
+            <span class="step-desc">Select plan</span>
+          </div>
+        </div>
+        <div class="step-item" data-step="3">
+          <div class="step-circle">3</div>
+          <div class="step-info">
+            <span class="step-label">Step 3</span>
+            <span class="step-desc">Add-ons</span>
+          </div>
+        </div>
+        <div class="step-item" data-step="4">
+          <div class="step-circle">4</div>
+          <div class="step-info">
+            <span class="step-label">Step 4</span>
+            <span class="step-desc">Summary</span>
+          </div>
+        </div>
+    </div>
+      </div>
+
+    <div class="form-section">
+      <h1>Select your plan</h1>
+      <p>You have the option of monthly or yearly billing.</p>
+
+      <form id="planForm">
+        <div class="plan-options">
+            <label class="plan-card">
+                <input type="radio" name="plan" value="arcade" required />
+                <div class="plan-content">
+                  <img src="https://img.icons8.com/ios-filled/50/user.png" alt="Arcade" />
+                  <strong>Arcade</strong>
+                  <span class="plan-price" data-monthly="$9/mo" data-yearly="$90/yr">$9/mo</span>
+                  <span class="plan-free">2 months free</span>
+                </div>
+              </label>
+              
+          </label>
+          <label class="plan-card">
+            <input type="radio" name="plan" value="advanced" />
+            <div class="plan-content">
+              <img src="https://img.icons8.com/ios-filled/50/controller.png" alt="Advanced" />
+              <div>
+                <strong>Advanced</strong>
+                <span class="plan-price" data-monthly="$12/mo" data-yearly="$120/yr">$12/mo</span>
+                <span class="plan-free">2 months free</span>
+
+              </div>
+            </div>
+          </label>
+          <label class="plan-card">
+            <input type="radio" name="plan" value="pro" />
+            <div class="plan-content">
+              <img src="https://img.icons8.com/ios-filled/50/console.png" alt="Pro" />
+              <div>
+                <strong>Pro</strong>
+                <span class="plan-price" data-monthly="$15/mo" data-yearly="$150/yr">$15/mo</span>
+                <span class="plan-free">2 months free</span>
+
+              </div>
+            </div>
+          </label>
+        </div>
+
+        <div class="toggle-wrapper">
+          <span>Monthly</span>
+          <label class="switch">
+            <input type="checkbox" id="billingToggle">
+            <span class="slider"></span>
+          </label>
+          <span>Yearly</span>
+        </div>
+
+        <div class="button-row">
+          <a href="index.html" class="go-back">Go Back</a>
+          <button type="submit" class="next-btn">Next Step</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  
+</body>
+</html>
