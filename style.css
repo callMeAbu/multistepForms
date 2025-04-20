@@ -514,25 +514,26 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 80%;
+        width: 85%;
       }
     
       .plan-content img {
         width: 40px;
         height: 40px;
-        margin: 0;
+        margin-bottom: 10px;
       }
     
       .plan-price {
         font-size: 0.9rem;
         color: #9699aa;
+        margin-top: 5px;
       }
     
       .plan-free {
         display: block;
         font-size: 0.75rem;
         color: #022959;
-        margin-top: 3px;
+        margin-top: -5px;
       }
     
       .toggle-wrapper {
