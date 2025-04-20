@@ -497,15 +497,13 @@ body {
     }
 
 
-
-
     .plan-options {
         flex-direction: column;
-        gap: 15px;
+        gap: 25px;
       }
     
       .plan-card {
-        width: 100%;
+        width: 90%;
         padding: 15px;
         display: flex;
         align-items: center;
@@ -516,7 +514,7 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        width: 80%;
       }
     
       .plan-content img {
